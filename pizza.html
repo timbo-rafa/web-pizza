@@ -10,11 +10,14 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="./architects_files/w3.css">
-<script type="text/javascript" charset="UTF-8" src="./architects_files/common.js"></script><script type="text/javascript" charset="UTF-8" src="./architects_files/map.js"></script><script type="text/javascript" charset="UTF-8" src="./architects_files/util.js"></script><script type="text/javascript" charset="UTF-8" src="./architects_files/marker.js"></script><style type="text/css">.gm-style {
+<link rel="stylesheet" href="./timbo.css">
+<style type="text/css">.gm-style {
         font: 400 11px Roboto, Arial, sans-serif;
         text-decoration: none;
       }
-      .gm-style img { max-width: none; }</style><script type="text/javascript" charset="UTF-8" src="./architects_files/onion.js"></script><script type="text/javascript" charset="UTF-8" src="./architects_files/controls.js"></script><script type="text/javascript" charset="UTF-8" src="./architects_files/stats.js"></script></head><body>
+      .gm-style img { max-width: none; }</style>
+</head>
+<body>
 <script src="pizza.js"/></script>
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
@@ -24,7 +27,7 @@
       <b>Centennial</b> Pizza</a>
     <!-- Float links to the right. Hide them on small screens -->
     <div class="w3-right w3-hide-small">
-      <a href="pizza.html#flavours" class="w3-bar-item w3-button">Flavours</a>
+      <a href="pizza.html#flavours" class="w3-bar-item w3-button" onClick="onFlavourNav()">Flavours</a>
       <!--
       <a href="https://www.w3schools.com/w3css/tryw3css_templates_architect.htm#about" class="w3-bar-item w3-button">About</a>
       <a href="https://www.w3schools.com/w3css/tryw3css_templates_architect.htm#contact" class="w3-bar-item w3-button">Contact</a>
@@ -45,56 +48,56 @@
 <div class="w3-content w3-padding" style="max-width:1564px">
 
   <!-- Flavours Section -->
-  <div class="w3-container w3-padding-32" id="flavours">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Flavours</h3>
+  <div id="flavours">
+    <div class="w3-container w3-padding-32"> 
+      <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Flavours</h3>
+    </div>
+
+    <div class="w3-row-padding">
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <a href="pizza.html#details" onClick="onFlavourClick(this)" id="cheddar">
+          <div class="w3-display-container">
+            <div class="w3-display-topleft w3-black w3-padding">Cheddar Supreme</div>
+            <img src="./imgs/cheddar.jpg" alt="Cheddar Supreme" style="width:100%">
+          </div>
+        </a>
+      </div>
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <a href="pizza.html#details" onClick="onFlavourClick(this)" id="hawaiian">
+          <div class="w3-display-container">
+            <div class="w3-display-topleft w3-black w3-padding">Super Hawaiian</div>
+            <img src="./imgs/hawaiian.jpg" alt="Super Hawaiian" style="width:100%">
+          </div>
+        </a>
+      </div>
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <a href="pizza.html#details" onClick="onFlavourClick(this)" id="meat">
+          <div class="w3-display-container">
+            <div class="w3-display-topleft w3-black w3-padding">Meat Supreme</div>
+            <img src="./imgs/meat.jpg" alt="Meat Supreme" style="width:100%">
+          </div>
+        </a>
+      </div>
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <a href="pizza.html#details" onClick="onFlavourClick(this)" id="veggie">
+          <div class="w3-display-container">
+            <div class="w3-display-topleft w3-black w3-padding">Veggie</div>
+            <img src="./imgs/veggie.jpg" alt="Veggie" style="width:100%">
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="w3-row-padding">
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <a href="pizza.html#details" onClick="onFlavourClick(this)" id="choco">
+          <div class="w3-display-container">
+            <div class="w3-display-topleft w3-black w3-padding">Chocolate Tropical</div>
+            <img src="./imgs/choco.jpg" alt="Chocolate Tropical" style="width:99%">
+          </div>
+        </a>
+      </div>
   </div>
-
-  <div class="w3-row-padding">
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <a href="#" onClick="onFlavourClick(this)" id="acheddar">
-        <div class="w3-display-container">
-          <div class="w3-display-topleft w3-black w3-padding">Cheddar Supreme</div>
-          <img src="./imgs/cheddar.jpg" alt="Cheddar Supreme" style="width:100%">
-        </div>
-      </a>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <a href="#" onClick="onFlavourClick(this)" id="ahawaiian">
-        <div class="w3-display-container">
-          <div class="w3-display-topleft w3-black w3-padding">Super Hawaiian</div>
-          <img src="./imgs/hawaiian.jpg" alt="Super Hawaiian" style="width:100%">
-        </div>
-      </a>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <a href="#" onClick="onFlavourClick(this)" id="ameat">
-        <div class="w3-display-container">
-          <div class="w3-display-topleft w3-black w3-padding">Meat Supreme</div>
-          <img src="./imgs/meat.jpg" alt="Meat Supreme" style="width:100%">
-        </div>
-      </a>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <a href="#" onClick="onFlavourClick(this)" id="aveggie">
-        <div class="w3-display-container">
-          <div class="w3-display-topleft w3-black w3-padding">Veggie</div>
-          <img src="./imgs/veggie.jpg" alt="Veggie" style="width:100%">
-        </div>
-      </a>
-    </div>
-  </div>
-
-  <div class="w3-row-padding">
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <a href="#" onClick="onFlavourClick(this)" id="achoco">
-        <div class="w3-display-container">
-          <div class="w3-display-topleft w3-black w3-padding">Chocolate Tropical</div>
-          <img src="./imgs/choco.jpg" alt="Chocolate Tropical" style="width:99%">
-        </div>
-      </a>
-    </div>
-
-    <!--
+  <!--
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-display-container">
         <div class="w3-display-topleft w3-black w3-padding">Brick House</div>
@@ -113,19 +116,23 @@
         <img src="./architects_files/house3.jpg" alt="House" style="width:99%">
       </div>
     </div>
-    -->
+  -->
+
+  <!-- Details Section -->
+  <div class="w3-container w3-padding-32" id="details">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16" id="cheddarTitle">Cheddar Supreme</h3>
+    <p id="cheddarDescription">This pizza features the classic combination of cheddar and broccoli and ups the ante by adding slides of tender, freshly grilled chicken. Try this pizza if you are feeling a little adventurous, but still in the mood for something familiar.</p>
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16" id="hawaiianTitle">Super Hawaiian</h3>
+    <p id="hawaiianDescription">Despite its name, the Hawaiian pizza wasn’t born on the sandy shores of its namesake island, but right here in the Great White North. Still, something about juicy pineapple wedges paired with smoked ham and slices of crispy bacon reminds us of somewhere sweeter and warmer.</p>
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16" id="meatTitle">Meat Supreme</h3>
+    <p id="meatDescription">The name says it all. Meat aficionados will love the rich intensity of zesty pepperoni, real bacon strips, seasoned ground beef and our signature spicy sausage piled atop a classic mozzarella base.</p>
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16" id="veggieTitle">Veggie</h3>
+    <p id="veggieDescription">If you’re in the mood for something a little lighter and healthier, try a pizza that pairs freshly sliced tomatoes with the crisp sweetness of green peppers and the strong presence of black olives. We promise you won’t even miss the meat.</p>
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16" id="chocoTitle">Chocolate Tropical</h3>
+    <p id="chocoDescription">Simply one of the most unique, delicious and impressive gourmet chocolate creations ever to tempt your taste-buds, accompanied with fresh strawberries.</p>
   </div>
 
-
-  <!-- About Section --
-  <div class="w3-container w3-padding-32" id="about">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">About</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
-      occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-      laboris nisi ut aliquip ex ea commodo consequat.
-    </p>
-  </div>
-
+  <!--
   <div class="w3-row-padding w3-grayscale">
     <div class="w3-col l3 m6 w3-margin-bottom">
       <img src="./architects_files/team2.jpg" alt="John" style="width:100%">
@@ -156,9 +163,10 @@
       <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
     </div>
   </div>
+  -->
 
-  <!-- Contact Section --
-  <div class="w3-container w3-padding-32" id="contact">
+  <!-- Contact Section -->
+  <div class="w3-container w3-padding-32" id="order">
     <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contact</h3>
     <p>Lets get in touch and talk about your and our next project.</p>
     <form action="https://www.w3schools.com/action_page.php" target="_blank">
@@ -180,5 +188,4 @@
   <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
 </footer>
 -->
-<script src="./architects_files/js"></script>
 </body></html>

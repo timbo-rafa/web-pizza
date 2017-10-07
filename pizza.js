@@ -9,27 +9,63 @@ function test() {
   console.log('on function test')
 }
 
+function onFlavourNav() {
+  hideSections();
+  changeImg(DEFAULT_IMG);
+  document.getElementById("flavours").style.display = "block";
+}
+
 function onFlavourClick(elt) {
+  var pizzaTitle, pizzaDescription;
   switch (elt.id) {
-    case "acheddar":
+    case "cheddar":
       changeImg(CHEDDAR_IMG)
       break;
-    case "achoco":
+    case "choco":
       changeImg(CHOCO_IMG)
       break;
-    case "ahawaiian":
+    case "hawaiian":
       changeImg(HAWAIIAN_IMG)
       break;
-    case "ameat":
+    case "meat":
       changeImg(MEAT_IMG)
       break;
-    case "aveggie":
+    case "veggie":
     changeImg(VEGGIE_IMG)
       break;
     default:
       changeImg(DEFAULT_IMG)
       break;
   }
+  hideSections();
+  document.getElementById("details").style.display = "block";
+  showFlavour(elt.id);
+}
+
+function showFlavour(flavour) {
+  hideFlavours();
+  console.log("FLAVOUR:" + flavour + "Title");
+  document.getElementById(flavour + "Title").style.display = "block";
+  document.getElementById(flavour + "Description").style.display = "block";
+}
+
+function hideFlavours() {
+  document.getElementById("cheddarTitle").style.display = "none"
+  document.getElementById("cheddarDescription").style.display = "none"
+  document.getElementById("hawaiianTitle").style.display = "none"
+  document.getElementById("hawaiianDescription").style.display = "none"
+  document.getElementById("meatTitle").style.display = "none"
+  document.getElementById("meatDescription").style.display = "none"
+  document.getElementById("veggieTitle").style.display = "none"
+  document.getElementById("veggieDescription").style.display = "none"
+  document.getElementById("chocoTitle").style.display = "none"
+  document.getElementById("chocoDescription").style.display = "none"
+}
+
+function hideSections() {
+  document.getElementById("flavours").style.display = "none";
+  document.getElementById("details").style.display = "none";
+  document.getElementById("order").style.display = "none";
 }
 
 function changeImg(img) {

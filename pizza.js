@@ -10,9 +10,7 @@ function test() {
 }
 
 function onFlavourNav() {
-  hideSections();
-  changeImg(DEFAULT_IMG);
-  showOnlySection("flavours")
+  onCancel()
 }
 
 function onFlavourClick(elt) {
@@ -40,6 +38,7 @@ function onFlavourClick(elt) {
   */
   changeImg("./imgs/" + elt.id + ".jpg")
   sessionStorage.setItem("flavour", elt.id)
+  console.log(sessionStorage)
   document.getElementById("details").style.display = "block";
   showFlavourDetails(elt.id);
 }
@@ -80,6 +79,7 @@ function onDetailsConfirm() {
       sessionStorage.setItem(topping, "true")
     }
   })
+  console.log(sessionStorage)
 }
 
 function showOnlySection(section) {

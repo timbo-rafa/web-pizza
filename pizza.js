@@ -38,7 +38,7 @@ function onFlavourClick(elt) {
       break;
   }
   */
-  changeImg("./imgs/" + elt.id)
+  changeImg("./imgs/" + elt.id + ".jpg")
   sessionStorage.setItem("flavour", elt.id)
   document.getElementById("details").style.display = "block";
   showFlavourDetails(elt.id);

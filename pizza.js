@@ -1,3 +1,10 @@
+/* Rafael Timbo Matos
+ * Student Number 300962678
+ * JavaScript file for pizza.html, mainly with onClick functions.
+ * Handles data input and state changes. Uses sessionStorage.
+ * v1.0
+ */
+
 const CHEDDAR_IMG="./imgs/cheddar.jpg"
 const CHOCO_IMG="./imgs/choco.jpg"
 const HAWAIIAN_IMG="./imgs/hawaiian.jpg"

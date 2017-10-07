@@ -2,6 +2,11 @@ div#details {
   display:none
 }
 
-div#asdasorder {
+div#order {
   display:none
+}
+
+/* Labels for checked inputs */
+input:checked + label {
+  font-weight: bold;
 }

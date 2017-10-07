@@ -133,11 +133,19 @@
     <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16" id="chocoTitle">Chocolate Tropical</h3>
     <p id="chocoDescription">Simply one of the most unique, delicious and impressive gourmet chocolate creations ever to tempt your taste-buds, accompanied with fresh strawberries.</p>
   
-    <label class="w3-checkbox">
-      <input type="checkbox">
-      Cheese
-      <div class="w3-checkmark"></div>
-    </label>
+    <p> Please select any extra toppings:</p>
+    <input type="checkbox" id="extraCheese">
+    <label for="extraCheese" class="w3-checkbox">Extra Cheese</label>
+    <div class="w3-checkmark"></div>
+
+    <input type="checkbox" id="spinach">
+    <label for="spinach" class="w3-checkbox">Spinach</label>
+    <div class="w3-checkmark"></div>
+
+    <input type="checkbox" id="blackOlives">
+    <label for="blackOlives" class="w3-checkbox">Black Olives</label>
+    <div class="w3-checkmark"></div>
+
     <button class="w3-button w3-black w3-section" onClick="onCancel()">
         CANCEL
     </button>
@@ -187,6 +195,7 @@
       <input class="w3-input" type="text" placeholder="Name" required="" name="Name">
       <input class="w3-input w3-section" type="text" placeholder="Address" required="" name="Address">
       <input class="w3-input w3-section" type="tel" placeholder="Phone" required="" name="Phone">
+      <select 
       <input class="w3-input w3-section" type="text" placeholder="Credit Card Number" required="" name="creditCardNumber">
       <input class="w3-input w3-section" type="text" placeholder="Expiry Date" required="" name="creditCardExpiryDate">
       <div class="w3-button w3-black w3-section" onClick="onCancel()">

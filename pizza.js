@@ -70,7 +70,9 @@ function onCancel() {
 }
 
 function onDetailsConfirm() {
-  showOnlySection("order")
+  var str = document.querySelector('.w3-checkbox:checked').nodeValue;
+  console.log('querySelector', str)
+  //showOnlySection("order")
 }
 
 function showOnlySection(section) {

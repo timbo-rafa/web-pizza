@@ -16,7 +16,7 @@ function onFlavourNav() {
 }
 
 function onFlavourClick(elt) {
-  var pizzaTitle, pizzaDescription;
+  /*
   switch (elt.id) {
     case "cheddar":
       changeImg(CHEDDAR_IMG)
@@ -37,6 +37,9 @@ function onFlavourClick(elt) {
       changeImg(DEFAULT_IMG)
       break;
   }
+  */
+  changeImg("./imgs/" + elt.id)
+  sessionStorage.setItem("flavour", elt.id)
   document.getElementById("details").style.display = "block";
   showFlavourDetails(elt.id);
 }
@@ -66,13 +69,17 @@ function hideFlavours() {
 
 function onCancel() {
   changeImg(DEFAULT_IMG);
+  sessionStorage.clear()
+  console.log('Items saved on sessionStorage:', sessionStorage.length)
   showOnlySection("flavours");
 }
 
 function onDetailsConfirm() {
-  var str = document.querySelector('.w3-checkbox:checked').nodeValue;
-  console.log('querySelector', str)
-  //showOnlySection("order")
+  ["extraCheese", "spinach", "blackOlives"].forEach( function saveToppings(topping) {
+    if (document.getElementById(topping).checked) {
+      sessionStorage.setItem(topping, "true")
+    }
+  })
 }
 
 function showOnlySection(section) {

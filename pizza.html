@@ -35,7 +35,7 @@
 
 <!-- Header -->
 <header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
-  <img class="w3-image" src="./imgs/pizza.jpg" alt="Pizza" width="1500" height="800">
+  <img class="w3-image" src="./imgs/pizza.jpg" alt="Pizza" width="1500" height="800" id="pizzaImage">
   <div class="w3-display-middle w3-margin-top w3-center">
     <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>Centennial</b></span> <span class="w3-hide-small w3-text-light-grey">pizza</span></h1>
   </div>
@@ -51,37 +51,47 @@
 
   <div class="w3-row-padding">
     <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">Cheddar Supreme</div>
-        <img src="./imgs/cheddar.jpg" alt="Cheddar Supreme" style="width:100%">
-      </div>
+      <a href="#" onClick="onFlavourClick(this)" id="acheddar">
+        <div class="w3-display-container">
+          <div class="w3-display-topleft w3-black w3-padding">Cheddar Supreme</div>
+          <img src="./imgs/cheddar.jpg" alt="Cheddar Supreme" style="width:100%">
+        </div>
+      </a>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">Super Hawaiian</div>
-        <img src="./imgs/hawaiian.jpg" alt="Super Hawaiian" style="width:100%">
-      </div>
+      <a href="#" onClick="onFlavourClick(this)" id="ahawaiian">
+        <div class="w3-display-container">
+          <div class="w3-display-topleft w3-black w3-padding">Super Hawaiian</div>
+          <img src="./imgs/hawaiian.jpg" alt="Super Hawaiian" style="width:100%">
+        </div>
+      </a>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">Meat Supreme</div>
-        <img src="./imgs/meat.jpg" alt="Meat Supreme" style="width:100%">
-      </div>
+      <a href="#" onClick="onFlavourClick(this)" id="ameat">
+        <div class="w3-display-container">
+          <div class="w3-display-topleft w3-black w3-padding">Meat Supreme</div>
+          <img src="./imgs/meat.jpg" alt="Meat Supreme" style="width:100%">
+        </div>
+      </a>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">Veggie</div>
-        <img src="./imgs/veggie.jpg" alt="Veggie" style="width:100%">
-      </div>
+      <a href="#" onClick="onFlavourClick(this)" id="aveggie">
+        <div class="w3-display-container">
+          <div class="w3-display-topleft w3-black w3-padding">Veggie</div>
+          <img src="./imgs/veggie.jpg" alt="Veggie" style="width:100%">
+        </div>
+      </a>
     </div>
   </div>
 
   <div class="w3-row-padding">
     <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">Chocolate Tropical</div>
-        <img src="./imgs/choco.jpg" alt="Chocolate Tropical" style="width:99%">
-      </div>
+      <a href="#" onClick="onFlavourClick(this)" id="achoco">
+        <div class="w3-display-container">
+          <div class="w3-display-topleft w3-black w3-padding">Chocolate Tropical</div>
+          <img src="./imgs/choco.jpg" alt="Chocolate Tropical" style="width:99%">
+        </div>
+      </a>
     </div>
 
     <!--
@@ -170,6 +180,5 @@
   <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
 </footer>
 -->
-
 <script src="./architects_files/js"></script>
 </body></html>

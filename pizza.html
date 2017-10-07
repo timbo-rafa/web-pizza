@@ -133,11 +133,16 @@
     <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16" id="chocoTitle">Chocolate Tropical</h3>
     <p id="chocoDescription">Simply one of the most unique, delicious and impressive gourmet chocolate creations ever to tempt your taste-buds, accompanied with fresh strawberries.</p>
   
-    <button class="w3-button w3-black w3-section" onClick="onDetailsCancel()">
-        <i class="fa fa-paper-plane"></i> CANCEL
+    <label class="w3-checkbox">
+      <input type="checkbox">
+      Cheese
+      <div class="w3-checkmark"></div>
+    </label>
+    <button class="w3-button w3-black w3-section" onClick="onCancel()">
+        CANCEL
     </button>
     <button class="w3-button w3-black w3-section" onClick="onDetailsConfirm()">
-        <i class="fa fa-paper-plane"></i> CONFIRM
+        CONFIRM
     </button>
   </div>
 
@@ -176,15 +181,19 @@
 
   <!-- Contact Section -->
   <div class="w3-container w3-padding-32" id="order">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contact</h3>
-    <p>Lets get in touch and talk about your and our next project.</p>
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Customer Information</h3>
+    <p>Please provide the required information:</p>
     <form action="https://www.w3schools.com/action_page.php" target="_blank">
       <input class="w3-input" type="text" placeholder="Name" required="" name="Name">
-      <input class="w3-input w3-section" type="text" placeholder="Email" required="" name="Email">
-      <input class="w3-input w3-section" type="text" placeholder="Subject" required="" name="Subject">
-      <input class="w3-input w3-section" type="text" placeholder="Comment" required="" name="Comment">
+      <input class="w3-input w3-section" type="text" placeholder="Address" required="" name="Address">
+      <input class="w3-input w3-section" type="tel" placeholder="Phone" required="" name="Phone">
+      <input class="w3-input w3-section" type="text" placeholder="Credit Card Number" required="" name="creditCardNumber">
+      <input class="w3-input w3-section" type="text" placeholder="Expiry Date" required="" name="creditCardExpiryDate">
+      <div class="w3-button w3-black w3-section" onClick="onCancel()">
+        CANCEL
+      </div>
       <button class="w3-button w3-black w3-section" type="submit">
-        <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        SUBMIT
       </button>
     </form>
   </div>

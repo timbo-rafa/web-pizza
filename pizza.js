@@ -64,7 +64,7 @@ function hideFlavours() {
   document.getElementById("chocoDescription").style.display = "none"
 }
 
-function onDetailsCancel() {
+function onCancel() {
   changeImg(DEFAULT_IMG);
   showOnlySection("flavours");
 }

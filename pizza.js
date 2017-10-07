@@ -60,6 +60,7 @@ function onDetailsConfirm() {
     sessionStorage.setItem(topping, isChecked);
   })
   console.log(sessionStorage);
+  showOnlySection("order")
 }
 
 function showOnlySection(section) {

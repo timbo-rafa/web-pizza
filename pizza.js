@@ -12,7 +12,7 @@ function test() {
 function onFlavourNav() {
   hideSections();
   changeImg(DEFAULT_IMG);
-  document.getElementById("flavours").style.display = "block";
+  showOnlySection("flavours")
 }
 
 function onFlavourClick(elt) {
@@ -37,14 +37,16 @@ function onFlavourClick(elt) {
       changeImg(DEFAULT_IMG)
       break;
   }
-  hideSections();
   document.getElementById("details").style.display = "block";
-  showFlavour(elt.id);
+  showFlavourDetails(elt.id);
 }
 
-function showFlavour(flavour) {
+function showFlavourDetails(flavour) {
+  // hide other flavour descriptions
   hideFlavours();
-  console.log("FLAVOUR:" + flavour + "Title");
+  // show details section
+  showOnlySection("details");
+  console.log("FLAVOUR:" + flavour);
   document.getElementById(flavour + "Title").style.display = "block";
   document.getElementById(flavour + "Description").style.display = "block";
 }
@@ -60,6 +62,20 @@ function hideFlavours() {
   document.getElementById("veggieDescription").style.display = "none"
   document.getElementById("chocoTitle").style.display = "none"
   document.getElementById("chocoDescription").style.display = "none"
+}
+
+function onDetailsCancel() {
+  changeImg(DEFAULT_IMG);
+  showOnlySection("flavours");
+}
+
+function onDetailsConfirm() {
+  showOnlySection("order")
+}
+
+function showOnlySection(section) {
+  hideSections();
+  document.getElementById(section).style.display = "block"
 }
 
 function hideSections() {

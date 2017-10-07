@@ -14,28 +14,6 @@ function onFlavourNav() {
 }
 
 function onFlavourClick(elt) {
-  /*
-  switch (elt.id) {
-    case "cheddar":
-      changeImg(CHEDDAR_IMG)
-      break;
-    case "choco":
-      changeImg(CHOCO_IMG)
-      break;
-    case "hawaiian":
-      changeImg(HAWAIIAN_IMG)
-      break;
-    case "meat":
-      changeImg(MEAT_IMG)
-      break;
-    case "veggie":
-    changeImg(VEGGIE_IMG)
-      break;
-    default:
-      changeImg(DEFAULT_IMG)
-      break;
-  }
-  */
   changeImg("./imgs/" + elt.id + ".jpg")
   sessionStorage.setItem("flavour", elt.id)
   console.log(sessionStorage)
@@ -48,7 +26,6 @@ function showFlavourDetails(flavour) {
   hideFlavours();
   // show details section
   showOnlySection("details");
-  console.log("FLAVOUR:" + flavour);
   document.getElementById(flavour + "Title").style.display = "block";
   document.getElementById(flavour + "Description").style.display = "block";
 }
@@ -75,11 +52,14 @@ function onCancel() {
 
 function onDetailsConfirm() {
   ["extraCheese", "spinach", "blackOlives"].forEach( function saveToppings(topping) {
+    var isChecked;
+    isChecked = "false";
     if (document.getElementById(topping).checked) {
-      sessionStorage.setItem(topping, "true")
+      isChecked = "true";
     }
+    sessionStorage.setItem(topping, isChecked);
   })
-  console.log(sessionStorage)
+  console.log(sessionStorage);
 }
 
 function showOnlySection(section) {

@@ -1,4 +1,9 @@
 const CHEDDAR_IMG="./imgs/cheddar.jpg"
+const CHOCO_IMG="./imgs/choco.jpg"
+const HAWAIIAN_IMG="./imgs/hawaiian.jpg"
+const MEAT_IMG="./imgs/meat.jpg"
+const VEGGIE_IMG="./imgs/veggie.jpg"
+const DEFAULT_IMG="./imgs/pizza.jpg"
 
 function test() {
   console.log('on function test')
@@ -25,7 +30,6 @@ function onFlavourClick(elt) {
       changeImg(DEFAULT_IMG)
       break;
   }
-
 }
 
 function changeImg(img) {

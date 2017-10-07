@@ -18,6 +18,7 @@
       .gm-style img { max-width: none; }</style>
 </head>
 <body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>    
 <script src="pizza.js"/></script>
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
@@ -134,15 +135,15 @@
     <p id="chocoDescription">Simply one of the most unique, delicious and impressive gourmet chocolate creations ever to tempt your taste-buds, accompanied with fresh strawberries.</p>
   
     <p> Please select any extra toppings:</p>
-    <input type="checkbox" id="extraCheese">
+    <input type="checkbox" name="toppings[]" id="extraCheese">
     <label for="extraCheese" class="w3-checkbox">Extra Cheese</label>
     <div class="w3-checkmark"></div>
 
-    <input type="checkbox" id="spinach">
+    <input type="checkbox" name="toppings[]" id="spinach">
     <label for="spinach" class="w3-checkbox">Spinach</label>
     <div class="w3-checkmark"></div>
 
-    <input type="checkbox" id="blackOlives">
+    <input type="checkbox" name="toppings[]" id="blackOlives">
     <label for="blackOlives" class="w3-checkbox">Black Olives</label>
     <div class="w3-checkmark"></div>
 

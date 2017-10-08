@@ -83,11 +83,18 @@ function onDetailsConfirm() {
   showOnlySection("order")
 }
 
+function tax() {
+  var oldPrice = parseFloat(sessionStorage.getItem("price"))
+  sessionStorage.setItem("price",
+   oldPrice + 0.13 * oldPrice)
+}
+
 function onSubmit(form) {
   ["name", "address", "phone", "creditCardType", "creditCardExpiryDate", "creditCardNumber"]
     .forEach(function saveCustomerData(field) {
       sessionStorage.setItem(field, form[field].value)
     })
+  tax()
   console.log(sessionStorage)
   showOnlySection("receipt")
 

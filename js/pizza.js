@@ -86,7 +86,8 @@ function onDetailsConfirm() {
 function tax() {
   var oldPrice = parseFloat(sessionStorage.getItem("price"))
   sessionStorage.setItem("price",
-   oldPrice + 0.13 * oldPrice)
+   Math.trunc(( oldPrice + 0.13 * oldPrice ) * 100.0)/100.0
+  )
 }
 
 function onSubmit(form) {

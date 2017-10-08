@@ -12,6 +12,14 @@ const MEAT_IMG="./imgs/meat.jpg"
 const VEGGIE_IMG="./imgs/veggie.jpg"
 const DEFAULT_IMG="./imgs/pizza.jpg"
 
+const pizzaIdToTitle = {
+  cheddar:   "Cheddar Supreme",
+  hawaiian: "Super Hawaiian",
+  meat:     "Meat Supreme",
+  veggie:   "Veggie",
+  choco:    "Chocolate Tropical"
+}
+
 function test() {
   console.log('on function test')
 }
@@ -60,9 +68,9 @@ function onCancel() {
 function onDetailsConfirm() {
   ["extraCheese", "spinach", "blackOlives"].forEach( function saveToppings(topping) {
     var isChecked;
-    isChecked = "false";
+    isChecked = "No";
     if (document.getElementById(topping).checked) {
-      isChecked = "true";
+      isChecked = "Yes";
     }
     sessionStorage.setItem(topping, isChecked);
   })
@@ -76,7 +84,26 @@ function onSubmit(form) {
       sessionStorage.setItem(field, form[field].value)
     })
   console.log(sessionStorage)
-  return true
+  showOnlySection("receipt")
+
+  printReceipt()
+  return false
+}
+
+function printReceipt() {
+  var receiptNumber = Math.round((Math.random() * 100000000) + 1000000)
+  var receiptText = "Your order was placed successfully.<br>" +
+  "Order: "              + receiptNumber                         + ".<br>" +
+  "Customer: "           + sessionStorage.getItem("name")        + ".<br>" +
+  "Delivery Address: "   + sessionStorage.getItem("address")     + ".<br>" +
+  // Price
+  "Pizza:"               + pizzaIdToTitle[ sessionStorage.getItem("flavour") ] + ".<br>" +
+  "Toppings:<br>"        +
+  "&emsp;Extra cheese: " + sessionStorage.getItem("extraCheese") + ".<br>" +
+  "&emsp;Spinach: "      + sessionStorage.getItem("spinach")     + ".<br>" +
+  "&emsp;Black Olives: " + sessionStorage.getItem("blackOlives") + ".<br>"
+
+  document.getElementById("receiptText").innerHTML = receiptText
 }
 
 function showOnlySection(section) {
@@ -88,6 +115,7 @@ function hideSections() {
   document.getElementById("flavours").style.display = "none";
   document.getElementById("details").style.display = "none";
   document.getElementById("order").style.display = "none";
+  document.getElementById("receipt").style.display = "none";
 }
 
 function changeImg(img) {

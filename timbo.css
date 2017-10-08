@@ -6,13 +6,17 @@
  */
 
 div#details {
-  display:none
+  display:none;
 }
 
 div#order {
-  display:none
+  display:none;
 }
 
+div#receipt {
+  display:none;
+  font-family: "Monaco", "DejaVu Sans Mono", "Courier New", "Verdana";
+}
 /* Labels for checked inputs */
 input:checked + label {
   font-weight: bold;

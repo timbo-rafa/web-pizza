@@ -15,7 +15,7 @@ div#order {
 
 div#receipt {
   display:none;
-  font-family: "Monaco", "DejaVu Sans Mono", "Courier New", "Verdana";
+  font-family: "DejaVu Sans Mono", "Courier New", "Monaco", "Verdana";
 }
 /* Labels for checked inputs */
 input:checked + label {

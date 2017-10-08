@@ -31,6 +31,8 @@ function onFlavourNav() {
 function onFlavourClick(elt) {
   changeImg("./imgs/" + elt.id + ".jpg")
   sessionStorage.setItem("flavour", elt.id)
+  var price = document.getElementById(elt.id + "Price").innerText;
+  sessionStorage.setItem("price", price.replace("$",""))
   console.log(sessionStorage)
   document.getElementById("details").style.display = "block";
   showFlavourDetails(elt.id);
@@ -71,6 +73,9 @@ function onDetailsConfirm() {
     isChecked = "No";
     if (document.getElementById(topping).checked) {
       isChecked = "Yes";
+      sessionStorage.setItem("price",
+        parseFloat(sessionStorage.getItem("price")) + 0.39
+      )
     }
     sessionStorage.setItem(topping, isChecked);
   })
@@ -96,7 +101,7 @@ function printReceipt() {
   "Order: "              + receiptNumber                         + ".<br>" +
   "Customer: "           + sessionStorage.getItem("name")        + ".<br>" +
   "Delivery Address: "   + sessionStorage.getItem("address")     + ".<br>" +
-  // Price
+  "Price:"               + "$" + sessionStorage.getItem("price") + ".<br>" +
   "Pizza:"               + pizzaIdToTitle[ sessionStorage.getItem("flavour") ] + ".<br>" +
   "Toppings:<br>"        +
   "&emsp;Extra cheese: " + sessionStorage.getItem("extraCheese") + ".<br>" +

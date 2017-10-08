@@ -6,19 +6,16 @@
 <html>
 <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">.gm-style .gm-style-mtc label,.gm-style .gm-style-mtc div{font-weight:400}
   </style><link type="text/css" rel="stylesheet" href="./architects_files/css"><style type="text/css">.gm-style .gm-style-cc span,.gm-style .gm-style-cc a,.gm-style .gm-style-mtc div{font-size:10px}
+    <style type="text/css">.gm-style { font: 400 11px Roboto, Arial, sans-serif; text-decoration: none; } .gm-style img { max-width: none; }</style>
   </style><style type="text/css">@media print {  .gm-style .gmnoprint, .gmnoprint {    display:none  }}@media screen {  .gm-style .gmnoscreen, .gmnoscreen {    display:none  }}</style><style type="text/css">.gm-style-pbc{transition:opacity ease-in-out;background-color:rgba(0,0,0,0.45);text-align:center}.gm-style-pbt{font-size:22px;color:white;font-family:Roboto,Arial,sans-serif;position:relative;margin:0;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}
   </style>
+
   <meta name="description" content="Centennial Pizza is the best place to order your pizza for fast and delicious delivery or pick-up with affordable prices! Order now!">
   <title>Centennial Pizza: Pizza Delivery</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="./architects_files/w3.css">
   <link rel="stylesheet" href="./timbo.css">
-  <style type="text/css">.gm-style {
-          font: 400 11px Roboto, Arial, sans-serif;
-          text-decoration: none;
-        }
-        .gm-style img { max-width: none; }</style>
 </head>
 <body>
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
@@ -195,21 +192,21 @@
   <div class="w3-container w3-padding-32" id="order">
     <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Customer Information</h3>
     <p>Please provide the required information:</p>
-    <form action="https://www.w3schools.com/action_page.php" target="_blank">
-      <input class="w3-input" type="text" placeholder="Name" required="" name="Name">
-      <input class="w3-input w3-section" type="text" placeholder="Address" required="" name="Address">
-      <input class="w3-input w3-section" type="tel" placeholder="Phone" required="" name="Phone">
+    <form name="customerForm" onsubmit="return onSubmit(this)">
+      <input class="w3-input" type="text" placeholder="Name" required="" name="name">
+      <input class="w3-input w3-section" type="text" placeholder="Address" required="" name="address">
+      <input class="w3-input w3-section" type="tel" placeholder="Phone" required="" name="phone">
       <select class="w3-select" name="creditCardType">
           <option value="" disabled selected>Choose your card type</option>
           <option value="mastercard">Mastercard</option>
           <option value="visa">Visa</option>
         </select>
+        <input class="w3-input w3-section" type="text" placeholder="Expiry Date" required="" name="creditCardExpiryDate">
       <input class="w3-input w3-section" type="text" placeholder="Credit Card Number" required="" name="creditCardNumber">
-      <input class="w3-input w3-section" type="text" placeholder="Expiry Date" required="" name="creditCardExpiryDate">
       <div class="w3-button w3-black w3-section" onClick="onCancel()">
         CANCEL
       </div>
-      <button class="w3-button w3-black w3-section" type="submit" onClick="onSubmit()">
+      <button class="w3-button w3-black w3-section" type="submit">
         SUBMIT
       </button>
     </form>

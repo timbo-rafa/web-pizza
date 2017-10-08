@@ -70,6 +70,15 @@ function onDetailsConfirm() {
   showOnlySection("order")
 }
 
+function onSubmit(form) {
+  ["name", "address", "phone", "creditCardType", "creditCardExpiryDate", "creditCardNumber"]
+    .forEach(function saveCustomerData(field) {
+      sessionStorage.setItem(field, form[field].value)
+    })
+  console.log(sessionStorage)
+  return true
+}
+
 function showOnlySection(section) {
   hideSections();
   document.getElementById(section).style.display = "block"

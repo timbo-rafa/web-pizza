@@ -21,3 +21,15 @@ div#receipt {
 input:checked + label {
   font-weight: bold;
 }
+
+.timbo-lemon {
+  background-color: #d4df38;
+}
+
+.timbo-text-lemon {
+  color: #d4df38 !important;
+}
+
+.timbo-light-gray {
+  background-color: #e8e8e8; 
+}

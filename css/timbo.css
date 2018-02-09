@@ -13,6 +13,10 @@ div#order {
   display:none;
 }
 
+img.timbo-pizza {
+  width: 100%;
+}
+
 div#receipt {
   display:none;
   font-family: "DejaVu Sans Mono", "Courier New", "Monaco", "Verdana";
